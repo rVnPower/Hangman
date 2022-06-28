@@ -116,7 +116,12 @@ fn main() {
         
         // Break when the whole word was all discovered
         if check_if_won(&masked_word) {
-            println!("You won!");
+            println!("You win!");
+            break;
+        }
+        // Lose
+        if lives < 1 {
+            println!("You lose!");
             break;
         }
 
@@ -130,7 +135,6 @@ fn main() {
             continue;
         }
     }
-    
 }
 
 fn clear() {
